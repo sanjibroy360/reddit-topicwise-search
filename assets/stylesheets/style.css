@@ -1,0 +1,512 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* My CSS */
+
+body {
+    line-height: 1.5;
+    background-color: rgb(218,224,230);
+}
+
+.header_container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    width: 600px;
+    height: auto;
+}
+
+
+/* Header */
+
+.header {
+    padding: 10px 0px;
+    background-color: #fff;
+}
+
+.nav_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo > i {
+    color: orangered;
+    font-size: 35px;
+}
+
+.brand_name {
+    font-size: 22px;
+    margin-left: 3px;
+}
+
+.input_box {
+    flex-basis: 55%;
+    text-align: center;
+    position: relative;
+}
+
+.input {
+    width: 80%;
+    padding: 10px 10px;
+    padding-left: 35px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #eee;
+
+    font-size: 18px;
+}
+
+.input:hover, input:active {
+    
+    border: 1px solid rgb(0,121,211);
+    border-radius: 5px;
+    outline: 0;
+}
+
+.search_btn {
+    position: absolute;
+    left: 75px;
+    top: 13px;  
+    background-color: transparent;
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 110px;
+    padding : 5px 0;
+    font-weight: 600;
+    border-radius: 3px;
+    border: 1px solid rgb(0,121,211);
+    background-color: #fff;
+    color: rgb(0,121,211);
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.blue_btn {
+    background-color: rgb(0,121,211);
+    color: #fff;
+}
+
+.blue_btn:hover {
+    opacity: 0.8;
+}
+
+.login_btn:hover {
+    color: rgba(0,121,211,0.8);
+}
+
+
+.option_btn {
+    width: 60px;
+    padding: 6px 0;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    outline: 0px;
+    cursor: pointer;
+
+    background-color: transparent;
+}
+
+.option_icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Blank Section */
+
+.blank_section {
+    width: 100%;
+    min-height: 64px;
+    background-color: rgb(54,167,250);
+}
+
+
+/* Subreddit Title */
+
+.subreddit_header_section {
+    background-color: #fff;
+    box-shadow: 1px 0.5px 2px #ddd;
+    padding: 2px;
+    padding-top: 0px;
+}
+
+.subreddit_flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.subreddit_img_wrapper {
+   
+    border-radius: 50%; 
+    
+    margin-top: -18px;
+    /* padding: 10px; */
+    
+}
+
+.subreddit_icon {
+    border-radius: 50%;
+    height: 72px;
+    width: 72px;
+    margin-right: 10px;
+    background-color: rgb(0,121,211);
+    fill: #fff;
+    padding: 3px;
+    border: 4px solid #fff;
+}
+
+.topic_name {
+    font-size: 30px;
+    font-weight: 550;
+    margin-right: 20px;
+}
+
+.subreddit_name {
+    font-size: 19px;
+    color: #777;
+    
+}
+
+.join_btn {
+    width: 90px;
+    padding: 8.5px 0;
+}
+
+
+/* Cards */
+
+.card {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 40px 0px;
+}
+
+.card_flex {
+    display: flex;
+}
+
+.side_number {
+    background-color: rgb(248,249,250);
+    text-align: center;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.up_arrow, .down_arrow {
+    color: rgb(135,138,140);
+    font-weight: bold;
+}
+
+.side_number .number {
+    font-weight: 550;
+    color: rgb(26,26,27);
+}
+
+
+.post {
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 3px;
+}
+
+.post .desc {
+    font-size: 12px;
+    color: rgb(141,144,146);
+}
+
+.post .heading {
+    font-size: 18px;
+    padding: 10px 0px;
+    color: rgb(68,68,68);
+}
+
+.post .content {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: rgb(94,94,94);
+    max-width: 647px;
+    overflow: hidden;
+}
+
+.comment_section {
+    display: flex;n: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* My CSS */
+
+body {
+    line-height: 1.5;
+    background-color: rgb(218,224,230);
+}
+
+
+.header_container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.none {
+    display: none;
+    padding: 0;
+}
+
+/* Header */
+
+.header {
+    padding: 10px 0px;
+    background-color: #fff;
+}
+
+.nav_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo > i {
+    color: orangered;
+    font-size: 35px;
+}
+
+.brand_name {
+    font-size: 22px;
+    margin-left: 3px;
+}
+
+.input_box {
+    flex-basis: 55%;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.input {
+    width: 80%;
+    padding: 10px 10px;
+    padding-left: 35px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #eee;
+
+    font-size: 18px;
+}
+
+.input:hover, input:active {
+    
+    border: 1px solid rgb(0,121,211);
+    border-radius: 5px;
+    outline: 0;
+}
+
+.search_btn {
+    position: absolute;
+    left: 75px;
+    top: 13px;  
+    background-color: transparent;
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 110px;
+    padding : 5px 0;
+    font-weight: 600;
+    border-radius: 3px;
+    border: 1px solid rgb(0,121,211);
+    background-color: #fff;
+    color: rgb(0,121,211);
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.blue_btn {
+    background-color: rgb(0,121,211);
+    color: #fff;
+}
+
+.blue_btn:hover {
+    opacity: 0.8;
+}
+
+.login_btn:hover {
+    color: rgba(0,121,211,0.8);
+}
+
+
+.option_btn {
+    width: 60px;
+    padding: 6px 0;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    outline: 0px;
+    cursor: pointer;
+
+    background-color: transparent;
+}
+
+.option_icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Blank Section */
+
+.blank_section {
+    width: 100%;
+    min-height: 64px;
+    background-color: rgb(54,167,250);
+}
+
+
+/* Subreddit Title */
+
+.subreddit_heading {
+    background-color: #fff;
+    margin-bottom: 40px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.comment_section li {
+    margin-right: 10px;
+    padding: 5px;
+    color: rgb(135,138,140);
+}
+
+
+/* Card Hover */
+
+.card:hover {
+    border: 1px solid #777;
+}
+
+.comment_section li:hover {
+    background-color: #eee;
+    border-radius: 3px;
+}
